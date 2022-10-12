@@ -1,9 +1,15 @@
 /* nejsme vcerejsi, pouzivame moderni a intuitivni box model */
 /* toto je černá magie, na kterou nešahej! */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
 
-/*
+/* 
 BARVY
 czechitas                 #b92e81
 šedé pozadí stránky       #bdc3c7
@@ -11,11 +17,119 @@ tmavé pozadí pod textem   #31363b
 dělítka mezi tlačítky     #3f464d
 tlačítko portfolio        #e74c3c
 tlačítko facebook         #3b5998
-tlačítko twitter          #1da1f2
-*/
+tlačítko twitter          #1da1f2 */
 
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+/* ---------------------------- */
 
 body {
   background-color: #bdc3c7;
 }
 
+.profil {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  /* width: 40%; */
+  color: rgba(244, 241, 232, 0.968);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.hlavicka {
+  position: relative;
+}
+
+.foto {
+  display: block;
+}
+
+.logo {
+  position: absolute;
+  bottom: -25px;
+  right: 30px;
+  border-radius: 50%;
+  background-color: #b92e81;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.obsah {
+  padding: 30px 15px;
+  background-color: #31363b;
+  line-height: 1.4;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.jmeno {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.odkazy {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  background-color: #31363b;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+li {
+  height: 50px;
+  font-weight: 600;
+  border: solid 1px #3f464d;
+  padding: 15px 15px;
+}
+
+.portfolio {
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 100%;
+}
+
+.portfolio:hover,
+.portfolio:focus {
+  background-color: #e74c3c;
+}
+
+.twitter,
+.facebook {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+}
+
+.facebook:hover,
+.facebook:focus {
+  background-color: #3b5998;
+}
+
+.twitter:hover,
+.twitter:focus {
+  background-color: #1da1f2;
+}
