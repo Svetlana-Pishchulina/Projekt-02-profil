@@ -102,8 +102,18 @@ p:not(:last-child) {
 li {
   height: 50px;
   font-weight: 600;
-  border: solid 1px #3f464d;
   padding: 15px 15px;
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
+}
+
+li:first-child {
+  border: solid 1px #3f464d;
+}
+
+li:nth-child(2) {
+  border-right: solid 1px #3f464d;
 }
 
 .portfolio {
